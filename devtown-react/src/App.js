@@ -1,12 +1,18 @@
 
 import './App.css';
+import Addrender from './components/Addrender';
+
+import CardsRender from './components/CardsRender';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+ 
        Heeloo
+       <CardsRender/>
+       <Addrender/>
+       
       </header>
     </div>
   );
