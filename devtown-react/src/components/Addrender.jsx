@@ -16,6 +16,13 @@ const Cartproducts = [
     price: 1485,
     discount: 3299,
   },
+  {
+    id: 1,
+    name: 'Lace-Up Shoes with Velcro Fastening',
+    image: shoe4,
+    price: 485,
+    discount: 3299,
+  },
  
   {
     id: 1,
