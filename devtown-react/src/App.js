@@ -1,22 +1,24 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import these components
-import {NavbarWithSearch}  from './components/NavbarWithSearch';
-import Carousel from './components/Carousel';
-import CardsRender from './components/CardsRender';
+import Home from "./components/Home"
+import Navbarwithsearch from "./components/NavbarWithSearch"
 
 import Cart from './components/Cart';
+import ContactUs from './components/Contactus';
+import AboutUs from './components/AboutUs';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <header className="App-header">
-          <NavbarWithSearch />
-
+        <Navbarwithsearch/>
           <Routes>
-            <Route path="/" element={<Carousel />} />
-            <Route path="/" element={<CardsRender />} />
+            <Route path="/" element={<Home />} />
+            
             <Route path="/cart" element={<Cart />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/aboutus" element={<AboutUs />} />
           </Routes>
 
           

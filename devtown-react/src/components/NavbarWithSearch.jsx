@@ -1,57 +1,52 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { Transition } from "@headlessui/react";
-
-function NavbarWithSearch() {
+import cartf from "./img/cartf.svg"
+import aboutus from "./img/aboutus.svg"
+import contactus from "./img/contactus.svg"
+export default function Navbarwithsearch() {
   const [isOpen, setIsOpen] = useState(false);
+  
   return (
     <div>
       <nav className="bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <img
-                  className="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                  alt="Workflow"
-                />
+            <div className="flex items-center justify-between w-full">
+              <div className="flex-shrink-0 flex ">
+              <Link to="/"> 
+                  <img
+                    className="h-8 w-8"
+                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    alt="Workflow"
+                  />
+                </Link>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <a
-                    href="#"
-                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Dashboard
-                  </a>
+                <Link to="/cart" className="hover-bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
+                  <div className="flex flex-row p-2 items-center justify-start gap-5 text-lg font-semibold">
+                  <img src={cartf} alt=""  className="w-10 h-10"/>
 
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Team
-                  </a>
+                <span>Cart</span>
+                  </div>
+                </Link>
+                <Link to="/aboutus" className="hover-bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
+                  <div className="flex flex-row p-2 items-center justify-start gap-5 text-lg font-semibold">
+                  <img src={aboutus} alt=""  className="w-10 h-10"/>
 
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Projects
-                  </a>
+                <span>AboutUs</span>
 
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Calendar
-                  </a>
+                  </div>
+                </Link>
+                <Link to="/contactus" className="hover-bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
+                  <div className="flex flex-row p-2 items-center justify-start gap-5 text-lg font-semibold">
+                  <img src={contactus} alt=""  className="w-10 h-10"/>
 
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Reports
-                  </a>
+                <span>ContactUs</span>
+                
+                  </div>
+                </Link>
                 </div>
               </div>
             </div>
@@ -59,7 +54,7 @@ function NavbarWithSearch() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover-text-white hover-bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -114,62 +109,35 @@ function NavbarWithSearch() {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
-                  href="#"
-                  className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Dashboard
-                </a>
+                <Link to="/cart" className="hover-bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
+                  <div className="flex flex-row p-2 items-center justify-start gap-5 text-lg font-semibold">
+                  <img src={cartf} alt=""  className="w-10 h-10"/>
 
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Team
-                </a>
+                <span>Cart</span>
+                  </div>
+                </Link>
+                <Link to="/aboutus" className="hover-bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
+                  <div className="flex flex-row p-2 items-center justify-start gap-5 text-lg font-semibold">
+                  <img src={aboutus} alt=""  className="w-10 h-10"/>
 
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Projects
-                </a>
+                <span>AboutUs</span>
 
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Calendar
-                </a>
+                  </div>
+                </Link>
+                <Link to="/contactus" className="hover-bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
+                  <div className="flex flex-row p-2 items-center justify-start gap-5 text-lg font-semibold">
+                  <img src={contactus} alt=""  className="w-10 h-10"/>
 
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Reports
-                </a>
+                <span>ContactUs</span>
+                
+                  </div>
+                </Link>
+                
               </div>
             </div>
           )}
         </Transition>
       </nav>
-
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-        </div>
-      </header>
-      <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        
-          <div className="px-4 py-6 sm:px-0">
-            <div className="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
-          </div>
-         
-        </div>
-      </main>
     </div>
   );
 }
-
-export default NavbarWithSearch;

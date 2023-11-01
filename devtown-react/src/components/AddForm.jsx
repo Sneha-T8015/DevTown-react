@@ -1,7 +1,32 @@
-import React from 'react';
-import plus from './img/plus-circle.svg';
+import React, { useState } from 'react';
 
 export default function AddForm({ CartProducts }) {
+  const [selectedItems, setSelectedItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  const handleCheckboxChange = (product) => {
+    const selectedIndex = selectedItems.indexOf(product);
+    const newSelectedItems = [...selectedItems];
+
+    if (selectedIndex === -1) {
+      newSelectedItems.push(product);
+    } else {
+      newSelectedItems.splice(selectedIndex, 1);
+    }
+
+    setSelectedItems(newSelectedItems);
+    updateTotalPrice(newSelectedItems);
+  };
+
+  const updateTotalPrice = (selectedItems) => {
+    const newTotalPrice = selectedItems.reduce(
+      (total, product) => total + product.price,
+      0
+    );
+
+    setTotalPrice(newTotalPrice);
+  };
+
   return (
     <div className='flex flex-col lg:flex-row p-3 justify-between items-start gap-3 '>
       {CartProducts.map((Cartproduct) => (
@@ -37,12 +62,22 @@ export default function AddForm({ CartProducts }) {
                 <input
                   type='checkbox'
                   className='bg-red-300 w-6 h-6 rounded-md'
+                  checked={selectedItems.includes(Cartproduct)}
+                  onChange={() => handleCheckboxChange(Cartproduct)}
                 />
               </div>
             </div>
           </div>
         </div>
       ))}
+     <div className='flex justify-between w-full items-center p-3'>
+     <div className="text-lg font-semibold">
+        Total Price: ₹{totalPrice}
+      </div>
+      <button className='py-2 px-6 bg-blue-400 rounded-md '>
+                  Pay
+      </button>
+     </div>
     </div>
   );
 }
