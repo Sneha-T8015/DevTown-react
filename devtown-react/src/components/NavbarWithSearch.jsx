@@ -6,7 +6,7 @@ import aboutus from "./img/aboutus.svg"
 import contactus from "./img/contactus.svg"
 export default function Navbarwithsearch() {
   const [isOpen, setIsOpen] = useState(false);
-  const [cartCount, setCartCount] = useState(2);
+  
   
   return (
     <div>
@@ -32,7 +32,7 @@ export default function Navbarwithsearch() {
                   <div className="flex flex-row p-2 items-center justify-start gap-5 text-lg font-semibold">
                   <div class="relative inline-block">
   <img src={cartf} alt="" class="w-10 h-10 "/>
-  <span class="absolute top-1 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-400 text-white text-xs rounded-full leading-4 px-2">{cartCount}</span>
+  <span class="absolute top-1 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-400 text-white text-xs rounded-full leading-4 px-2">2</span>
 </div>
 
 

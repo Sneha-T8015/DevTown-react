@@ -41,7 +41,7 @@ export default function AddForm({ CartProducts }) {
       {CartProducts.map((Cartproduct) => (
         <div
           key={Cartproduct.id}
-          className='flex w-[650px] flex-col lg:flex-row shadow-lg rounded-xl  bg-blue-300 p-3 justify-between items-center'
+          className='flex w-full lg:w-[650px] flex-col lg:flex-row shadow-lg rounded-xl hover:bg-blue-300 bg-blue-200 p-3 justify-between items-center'
         >
           <div className=''>
             <img

@@ -108,14 +108,14 @@ export default function CardsRender() {
     setSearchQuery(e.target.value);
   };
 
-  const filteredProducts = products
-    .map((category) => ({
-      category: category.category,
-      products: category.products.filter((product) =>
-        product.name.toLowerCase().includes(searchQuery.toLowerCase())
-      ),
-    }))
-    .filter((category) => category.products.length > 0);
+  // const filteredProducts = products
+  //   .map((category) => ({
+  //     category: category.category,
+  //     products: category.products.filter((product) =>
+  //       product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  //     ),
+  //   }))
+  //   .filter((category) => category.products.length > 0);
 
   return (
     <div className=' '>
