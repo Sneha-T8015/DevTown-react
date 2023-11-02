@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 export default function Cards({ products, handleAddToCart }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
-
+  
   const openPopup = (product) => {
     setSelectedProduct(product);
     setIsPopupOpen(true);

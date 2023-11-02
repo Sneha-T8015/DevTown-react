@@ -6,6 +6,7 @@ import aboutus from "./img/aboutus.svg"
 import contactus from "./img/contactus.svg"
 export default function Navbarwithsearch() {
   const [isOpen, setIsOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(2);
   
   return (
     <div>
@@ -29,7 +30,11 @@ export default function Navbarwithsearch() {
                 <div className="ml-10 flex items-baseline space-x-4">
                 <Link to="/cart" className="hover-bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
                   <div className="flex flex-row p-2 items-center justify-start gap-5 text-lg font-semibold">
-                  <img src={cartf} alt=""  className="w-10 h-10"/>
+                  <div class="relative inline-block">
+  <img src={cartf} alt="" class="w-10 h-10 "/>
+  <span class="absolute top-1 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-400 text-white text-xs rounded-full leading-4 px-2">{cartCount}</span>
+</div>
+
 
                 <span>Cart</span>
                   </div>

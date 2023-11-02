@@ -98,7 +98,10 @@ const products = [
  
 ];
 
+
 export default function CardsRender() {
+  
+
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearch = (e) => {
@@ -134,7 +137,7 @@ export default function CardsRender() {
        <FilterDropdown/>
        </div>
       </div>
-      <Cards products={products} />
+      <Cards products={products}  />
     </div>
   );
 }
