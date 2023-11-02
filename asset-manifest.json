@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/DevTown-react/static/css/main.c4548e3c.css",
+    "main.js": "/DevTown-react/static/js/main.4450c2c9.js",
+    "static/media/shoe3.jpg": "/DevTown-react/static/media/shoe3.1ac302b992ad840c5c17.jpg",
+    "static/media/cr4.jpg": "/DevTown-react/static/media/cr4.482d8696359af6675ba3.jpg",
+    "static/media/shoe2.jpg": "/DevTown-react/static/media/shoe2.3c8ed9120c023c6b0293.jpg",
+    "static/media/cr3.jpg": "/DevTown-react/static/media/cr3.4a5adf2c84509e360cf4.jpg",
+    "static/media/headphone3.jpg": "/DevTown-react/static/media/headphone3.087a396ab3a2a8c2a319.jpg",
+    "static/media/jewel5.jpg": "/DevTown-react/static/media/jewel5.6d1732cdd12653e23b31.jpg",
+    "static/media/cr5.jpg": "/DevTown-react/static/media/cr5.412200f98bb43630ceec.jpg",
+    "static/media/girly2.jpg": "/DevTown-react/static/media/girly2.93aa4180d4cac2fa334d.jpg",
+    "static/media/girly3.jpg": "/DevTown-react/static/media/girly3.40a5c3194ac60fa2f8e0.jpg",
+    "static/media/shoe4.jpg": "/DevTown-react/static/media/shoe4.cc713637787a85958d0b.jpg",
+    "static/media/headphone2.jpg": "/DevTown-react/static/media/headphone2.8b42e92f4222da208e7b.jpg",
+    "static/media/abt.jpg": "/DevTown-react/static/media/abt.efc0f51c86482c923978.jpg",
+    "static/media/jewel3.jpg": "/DevTown-react/static/media/jewel3.f5793935cb3af645f4b9.jpg",
+    "static/media/cr1.jpg": "/DevTown-react/static/media/cr1.e4f58042dfe2cb331db3.jpg",
+    "static/media/cr2.jpg": "/DevTown-react/static/media/cr2.ac5c606af3ff88a4134b.jpg",
+    "static/media/success.gif": "/DevTown-react/static/media/success.28187f21fa244d5d7044.gif",
+    "static/media/Online-bro.svg": "/DevTown-react/static/media/Online-bro.1138f85c24785a18a8357354c76e50f9.svg",
+    "static/media/cartf.svg": "/DevTown-react/static/media/cartf.0d60e17cc7e4349fc6aceed3ebdc7d99.svg",
+    "static/media/aboutus.svg": "/DevTown-react/static/media/aboutus.3849a437dc426bf18f8452adb63e88c7.svg",
+    "static/media/contactus.svg": "/DevTown-react/static/media/contactus.961b7eca02a40ff4b115f6f72c4f9197.svg",
+    "index.html": "/DevTown-react/index.html",
+    "static/media/plus-circle.svg": "/DevTown-react/static/media/plus-circle.a9c3165de6404c0f35c347df345ca6e9.svg",
+    "main.c4548e3c.css.map": "/DevTown-react/static/css/main.c4548e3c.css.map",
+    "main.4450c2c9.js.map": "/DevTown-react/static/js/main.4450c2c9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4548e3c.css",
+    "static/js/main.4450c2c9.js"
+  ]
+}
