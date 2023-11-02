@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-
+import PaymentForm from './PaymentForm';
 export default function AddForm({ CartProducts }) {
   const [selectedItems, setSelectedItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-
+  const [isPaymentFormVisible, setPaymentFormVisible] = useState(false);
   const handleCheckboxChange = (product) => {
     const selectedIndex = selectedItems.indexOf(product);
     const newSelectedItems = [...selectedItems];
-
+    
     if (selectedIndex === -1) {
       newSelectedItems.push(product);
     } else {
@@ -26,13 +26,22 @@ export default function AddForm({ CartProducts }) {
 
     setTotalPrice(newTotalPrice);
   };
+  const handlePay = () => {
+    if (totalPrice > 0) {
+      // Show the payment form only if the total price is greater than 0
+      setPaymentFormVisible(true);
+    } else {
+      alert('Your cart is empty. Add items to the cart before making a payment.');
+    }
+  };
 
   return (
-    <div className='flex flex-col lg:flex-row p-3 justify-between items-start gap-3 '>
+    <div>
+      <div className='flex flex-col lg:flex-row flex-wrap p-3 justify-between items-start gap-3 '>
       {CartProducts.map((Cartproduct) => (
         <div
           key={Cartproduct.id}
-          className='flex w-full lg:w-1/2 flex-col lg:flex-row shadow-lg rounded-xl  bg-blue-300 p-3 justify-between items-center'
+          className='flex w-[650px] flex-col lg:flex-row shadow-lg rounded-xl  bg-blue-300 p-3 justify-between items-center'
         >
           <div className=''>
             <img
@@ -70,13 +79,28 @@ export default function AddForm({ CartProducts }) {
           </div>
         </div>
       ))}
+    
+    </div>
      <div className='flex justify-between w-full items-center p-3'>
      <div className="text-lg font-semibold">
         Total Price: ₹{totalPrice}
       </div>
-      <button className='py-2 px-6 bg-blue-400 rounded-md '>
-                  Pay
-      </button>
+      <button onClick={handlePay} className='py-2 px-6 bg-blue-400 rounded-md '>
+          Pay
+        </button>
+      
+
+      
+      {isPaymentFormVisible && (
+        <PaymentForm
+          onClose={() => setPaymentFormVisible(false)}
+          onPayment={() => {
+            // Handle the payment logic here
+            // You can add your payment logic or API calls here
+          }}
+          totalPrice={totalPrice}
+        />
+      )}
      </div>
     </div>
   );

@@ -15,11 +15,14 @@ export default function Navbarwithsearch() {
             <div className="flex items-center justify-between w-full">
               <div className="flex-shrink-0 flex ">
               <Link to="/"> 
-                  <img
+                 <div className="flex flex-row">
+                 <img
                     className="h-8 w-8"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                     alt="Workflow"
                   />
+                 <span className="font-bold text-xl text-white px-3"> Shoppie</span>
+                 </div>
                 </Link>
               </div>
               <div className="hidden md:block">

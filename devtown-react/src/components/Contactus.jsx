@@ -5,7 +5,7 @@ import contact from "./img/Online-bro.svg"
 export default function ContactUs() {
   return (
    
-     <div id="contactMe" className="    m-1 lg:px-10 p-2 flex flex-col items-center justify-center rounded-lg ">
+     <div id="contactMe" className="  bg-gradient-to-b from-green-100 to-green-300  m-1 lg:px-10 p-2 flex flex-col items-center justify-center rounded-lg ">
          {/* Contact Form */}
       <div className='w-full'>
         <h2 className="text-2xl m-2 text-black font-semibold flex items-center justify-center ">Contact US</h2>
